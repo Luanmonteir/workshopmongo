@@ -1,7 +1,7 @@
 package com.luanmonteiro.workshopmongo.config;
 
 import com.luanmonteiro.workshopmongo.post.domain.Post;
-import com.luanmonteiro.workshopmongo.post.repository.PostRespository;
+import com.luanmonteiro.workshopmongo.post.repository.PostRepository;
 import com.luanmonteiro.workshopmongo.user.domain.User;
 import com.luanmonteiro.workshopmongo.user.domain.dto.AuthorDTO;
 import com.luanmonteiro.workshopmongo.user.respository.UserRepository;
@@ -21,7 +21,7 @@ public class Instantiation implements CommandLineRunner {
      private UserRepository  userRepository;
 
     @Autowired
-    private PostRespository postRespository;
+    private PostRepository postRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -41,7 +41,7 @@ public class Instantiation implements CommandLineRunner {
         Post post1= new Post(null,sdf.parse("21/03/2018"),"partiu viagem","vou viajar para Sao Paulo. Abraços!",new AuthorDTO(maria));
         Post post2= new Post(null,sdf.parse("23/03/2018"),"Bom Dia ","Acordei feliz hoje!",new AuthorDTO(maria));
 
-        postRespository.saveAll(Arrays.asList(post1,post2));
+        postRepository.saveAll(Arrays.asList(post1,post2));
 
 
         maria.getPosts().addAll(Arrays.asList(post1,post2));
