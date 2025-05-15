@@ -3,7 +3,7 @@ package com.luanmonteiro.workshopmongo.user.resources;
 
 import com.luanmonteiro.workshopmongo.post.domain.Post;
 import com.luanmonteiro.workshopmongo.user.domain.User;
-import com.luanmonteiro.workshopmongo.user.domain.dto.UserDTO;
+import com.luanmonteiro.workshopmongo.dto.UserDTO;
 import com.luanmonteiro.workshopmongo.user.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
